@@ -1,5 +1,6 @@
 import 'package:coffee_app/core/extensions/strings_extension.dart';
 import 'package:coffee_app/features/auth/presentation/widgets/auth_text_field.dart';
+import 'package:coffee_app/generated/assets.dart';
 import 'package:flutter/material.dart';
 
 class EmailTextFieldWidget extends StatelessWidget {
@@ -10,7 +11,7 @@ class EmailTextFieldWidget extends StatelessWidget {
     return SliverToBoxAdapter(
       child: AuthTextField(
         hintText: 'Enter Your Email'.hardCoded,
-        prefixIcon: Icons.email,
+        icon: Assets.svgMail,
       ),
     );
   }

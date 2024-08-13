@@ -13,6 +13,7 @@ class Assets {
   static const String pngGoogle = 'assets/png/google.png';
   static const String pngLoginImage = 'assets/png/login_image.png';
   static const String svgAppLogo = 'assets/svg/app_logo.svg';
+  static const String svgCartIcon = 'assets/svg/cart_icon.svg';
   static const String svgCheckYourEmailDark =
       'assets/svg/check_your_email_dark.svg';
   static const String svgCheckYourEmailLight =
@@ -20,8 +21,19 @@ class Assets {
   static const String svgCoffeeActiveDot = 'assets/svg/coffee_active_dot.svg';
   static const String svgCoffeeInactiveDot =
       'assets/svg/coffee_inactive_dot.svg';
+  static const String svgCorretoo = 'assets/svg/corretoo.svg';
+  static const String svgDarkMode = 'assets/svg/dark_mode.svg';
+  static const String svgEdit = 'assets/svg/edit.svg';
+  static const String svgEspresso = 'assets/svg/espresso.svg';
+  static const String svgFavouriteIcon = 'assets/svg/favourite_icon.svg';
   static const String svgGoogle = 'assets/svg/google.svg';
+  static const String svgHeart = 'assets/svg/heart.svg';
+  static const String svgHomeIcon = 'assets/svg/home_icon.svg';
+  static const String svgLightMode = 'assets/svg/light_mode.svg';
+  static const String svgLocationIcon = 'assets/svg/location_icon.svg';
   static const String svgLock = 'assets/svg/lock.svg';
+  static const String svgLogout = 'assets/svg/logout.svg';
+  static const String svgMacchiato = 'assets/svg/macchiato.svg';
   static const String svgMail = 'assets/svg/mail.svg';
   static const String svgOnboardingDark1 = 'assets/svg/onboarding_dark1.svg';
   static const String svgOnboardingDark2 = 'assets/svg/onboarding_dark2.svg';

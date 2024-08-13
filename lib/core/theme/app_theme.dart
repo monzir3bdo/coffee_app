@@ -7,7 +7,7 @@ import '../extensions/color_extenions.dart';
 
 ThemeData lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.indigo,
+    seedColor: AppColors.darkBrown,
     brightness: Brightness.light,
   ),
   extensions: const <ThemeExtension<dynamic>>[
@@ -17,7 +17,7 @@ ThemeData lightTheme = ThemeData(
 );
 ThemeData darkTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: AppColors.darkBrown,
+    seedColor: Color(0xff0C0F14),
     brightness: Brightness.dark,
   ),
   textTheme: TextTheme(

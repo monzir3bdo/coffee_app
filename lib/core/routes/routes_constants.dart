@@ -9,4 +9,7 @@ enum Routes {
   login,
   signUp,
   home,
+  cart,
+  favourite,
+  profile,
 }

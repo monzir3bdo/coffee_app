@@ -1,3 +1,4 @@
+import 'package:coffee_app/core/theme/app_text_styles.dart';
 import 'package:coffee_app/features/auth/presentation/widgets/coffee_beans_background_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -18,11 +19,10 @@ class SplashScreenBody extends StatelessWidget {
             child: SvgPicture.asset(Assets.svgAppLogo),
           ),
           const Gap(20),
-          const Text(
+          Text(
             'Coffee',
-            style: TextStyle(
-              fontFamily: 'Sofia-Regular',
-              fontSize: 56,
+            style: bold16.copyWith(
+              fontSize: 50,
             ),
           )
         ],
