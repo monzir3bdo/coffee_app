@@ -9,6 +9,7 @@ ThemeData lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
     seedColor: AppColors.darkBrown,
     brightness: Brightness.light,
+    surface: const Color(0xffFFFFFF),
   ),
   extensions: const <ThemeExtension<dynamic>>[
     AssetsExtension.light,
@@ -17,7 +18,8 @@ ThemeData lightTheme = ThemeData(
 );
 ThemeData darkTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Color(0xff0C0F14),
+    seedColor: const Color(0xff0C0F14),
+    surface: const Color(0xff0C0F14),
     brightness: Brightness.dark,
   ),
   textTheme: TextTheme(

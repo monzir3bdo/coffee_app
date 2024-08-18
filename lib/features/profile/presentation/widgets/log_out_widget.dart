@@ -1,11 +1,10 @@
 import 'package:coffee_app/core/extensions/strings_extension.dart';
-import 'package:coffee_app/core/routes/routes_constants.dart';
 import 'package:coffee_app/core/theme/app_text_styles.dart';
+import 'package:coffee_app/features/profile/presentation/widgets/log_out_dialoug_widget.dart';
 import 'package:coffee_app/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
 
 class LogOutWidget extends StatelessWidget {
   const LogOutWidget({super.key});
@@ -16,7 +15,8 @@ class LogOutWidget extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           //todo: implement The Logout
-          context.goNamed(Routes.login.name);
+          // context.goNamed(Routes.login.name);
+          CustomDialogs.showLogoutDialog(context);
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

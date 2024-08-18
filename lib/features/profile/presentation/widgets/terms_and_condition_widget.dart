@@ -6,6 +6,9 @@ class TermsAndConditionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SettingsContainerWidget(text: 'Terms And Condition', onTap: () {});
+    return SettingsContainerWidget(
+      text: 'Terms And Condition',
+      onTap: () {},
+    );
   }
 }

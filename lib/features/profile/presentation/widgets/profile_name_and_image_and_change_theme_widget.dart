@@ -8,7 +8,7 @@ class ProfileNameAndImageAndChangeThemeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return const SliverToBoxAdapter(
       child: ListTile(
         leading: ProfileImageWidget(),
         title: ProfileNameWidget(),

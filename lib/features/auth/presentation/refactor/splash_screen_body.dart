@@ -1,6 +1,7 @@
 import 'package:coffee_app/core/theme/app_text_styles.dart';
 import 'package:coffee_app/features/auth/presentation/widgets/coffee_beans_background_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
@@ -21,8 +22,8 @@ class SplashScreenBody extends StatelessWidget {
           const Gap(20),
           Text(
             'Coffee',
-            style: bold16.copyWith(
-              fontSize: 50,
+            style: semiBold16.copyWith(
+              fontSize: 30.sp,
             ),
           )
         ],

@@ -1,6 +1,7 @@
 import 'package:coffee_app/core/extensions/build_context_extneions.dart';
 import 'package:coffee_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SettingsContainerWidget extends StatelessWidget {
   const SettingsContainerWidget(
@@ -12,11 +13,11 @@ class SettingsContainerWidget extends StatelessWidget {
     return SliverToBoxAdapter(
       child: GestureDetector(
         child: Container(
-          width: 325,
-          height: 61,
+          width: 325.w,
+          height: 61.h,
           margin: const EdgeInsets.symmetric(horizontal: 24),
-          padding: const EdgeInsetsDirectional.only(
-              start: 15, end: 10, top: 21, bottom: 21),
+          padding: EdgeInsetsDirectional.only(
+              start: 15.w, end: 10.w, top: 21.h, bottom: 21.w),
           decoration: BoxDecoration(
             color: context.colors.containerColor,
             borderRadius: BorderRadius.circular(15),
@@ -29,7 +30,7 @@ class SettingsContainerWidget extends StatelessWidget {
                   color: context.colors.textColor,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Icon(
                 Icons.arrow_forward_ios_rounded,
                 size: 15,

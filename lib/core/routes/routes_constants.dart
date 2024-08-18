@@ -12,4 +12,7 @@ enum Routes {
   cart,
   favourite,
   profile,
+  coffeeDetails,
+  checkout,
+  orderTracking,
 }

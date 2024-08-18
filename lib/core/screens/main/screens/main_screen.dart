@@ -25,6 +25,7 @@ class MainScreen extends StatelessWidget {
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
+          enableFeedback: false,
           currentIndex: context.read<MainCubit>().currentPageIndex,
           onTap: (index) {
             context.read<MainCubit>().changePage(index, context);

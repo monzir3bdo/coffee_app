@@ -45,7 +45,7 @@ class OnboardingSlider extends StatelessWidget {
               Text(
                 onboardingModelList[index].subtitle,
                 style: regular12.copyWith(
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   color: context.colors.onboardingSubtitleColor,
                 ),
                 textAlign: TextAlign.center,

@@ -3,6 +3,7 @@ import 'package:coffee_app/features/auth/presentation/widgets/login/forget_passw
 import 'package:coffee_app/features/auth/presentation/widgets/login/password_text_field_widget.dart';
 import 'package:coffee_app/features/auth/presentation/widgets/login/welcome_back_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../widgets/login/continue_with_google_button_widget.dart';
@@ -17,27 +18,27 @@ class LoginScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return CustomScrollView(
       slivers: [
-        LoginScreenImageWidget(),
-        SliverGap(25),
-        WelcomeBackWidget(),
-        SliverGap(5),
-        EnterYourAccountTextWidget(),
-        SliverGap(20),
-        EmailTextFieldWidget(),
-        SliverGap(14),
-        PasswordTextFieldWidget(),
-        SliverGap(13),
-        ForgetPasswordWidget(),
-        SliverGap(15),
-        LoginButtonWidget(),
-        SliverGap(30),
-        ContinueWithGoogleTextWidget(),
-        SliverGap(20),
-        ContinueWithGoogleButtonWidget(),
-        SliverGap(5),
-        DoNotHaveAnAccountWidget(),
+        const LoginScreenImageWidget(),
+        SliverGap(25.h),
+        const WelcomeBackWidget(),
+        SliverGap(5.h),
+        const EnterYourAccountTextWidget(),
+        SliverGap(20.h),
+        const EmailTextFieldWidget(),
+        SliverGap(14.h),
+        const PasswordTextFieldWidget(),
+        SliverGap(13.h),
+        const ForgetPasswordWidget(),
+        SliverGap(15.h),
+        const LoginButtonWidget(),
+        SliverGap(30.h),
+        const ContinueWithGoogleTextWidget(),
+        SliverGap(20.h),
+        const ContinueWithGoogleButtonWidget(),
+        SliverGap(5.h),
+        const DoNotHaveAnAccountWidget(),
       ],
     );
   }

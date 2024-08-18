@@ -1,6 +1,7 @@
 import 'package:coffee_app/core/routes/routes_constants.dart';
 import 'package:coffee_app/core/widgets/app_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 class LoginButtonWidget extends StatelessWidget {
@@ -10,7 +11,7 @@ class LoginButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 28.0),
+        padding: EdgeInsets.symmetric(horizontal: 28.w),
         child: AppButton(
           onPressed: () {
             context.goNamed(Routes.home.name);

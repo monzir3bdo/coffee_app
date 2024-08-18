@@ -13,7 +13,7 @@ class ContinueWithGoogleButtonWidget extends StatelessWidget {
     return SliverToBoxAdapter(
       child: Container(
         height: 50.h,
-        margin: const EdgeInsets.symmetric(horizontal: 25),
+        margin: EdgeInsets.symmetric(horizontal: 25.w),
         child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
@@ -26,7 +26,7 @@ class ContinueWithGoogleButtonWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(Assets.pngGoogle),
-                const Gap(10),
+                Gap(10.w),
                 Text(
                   'Google',
                   style: medium14.copyWith(

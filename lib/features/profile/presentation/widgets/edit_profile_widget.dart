@@ -14,6 +14,7 @@ class EditProfileWidget extends StatelessWidget {
       child: Container(
         width: 30.w,
         height: 30.h,
+        margin: EdgeInsetsDirectional.only(end: 25.w),
         decoration: BoxDecoration(
             color: context.colors.containerColor,
             borderRadius: BorderRadius.circular(8)),

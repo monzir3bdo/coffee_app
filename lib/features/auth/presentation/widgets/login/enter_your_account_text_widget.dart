@@ -2,6 +2,7 @@ import 'package:coffee_app/core/extensions/build_context_extneions.dart';
 import 'package:coffee_app/core/extensions/strings_extension.dart';
 import 'package:coffee_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EnterYourAccountTextWidget extends StatelessWidget {
   const EnterYourAccountTextWidget({super.key});
@@ -13,7 +14,7 @@ class EnterYourAccountTextWidget extends StatelessWidget {
         child: Text(
           'Please Enter Your Account Here'.hardCoded,
           style: light12.copyWith(
-            fontSize: 14,
+            fontSize: 14.sp,
             color: context.colors.onboardingSubtitleColor,
           ),
         ),

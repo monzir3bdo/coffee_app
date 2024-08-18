@@ -19,6 +19,12 @@ class MainCubit extends Cubit<MainState> {
   void changePage(int pageIndex, BuildContext context) {
     currentPageIndex = pageIndex;
     context.goNamed(navbarPages[pageIndex]);
+    print(currentPageIndex);
     emit(MainState.pageChanged(pageIndex: pageIndex));
+  }
+
+  void changeActivePage(int index) {
+    currentPageIndex = index;
+    emit(MainState.pageChanged(pageIndex: index * 10));
   }
 }

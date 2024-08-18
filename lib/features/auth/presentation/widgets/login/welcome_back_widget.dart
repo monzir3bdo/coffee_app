@@ -2,6 +2,7 @@ import 'package:coffee_app/core/extensions/build_context_extneions.dart';
 import 'package:coffee_app/core/extensions/strings_extension.dart';
 import 'package:coffee_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WelcomeBackWidget extends StatelessWidget {
   const WelcomeBackWidget({super.key});
@@ -13,7 +14,7 @@ class WelcomeBackWidget extends StatelessWidget {
         child: Text(
           "Welcome Back".hardCoded,
           style: semiBold16.copyWith(
-            fontSize: 20,
+            fontSize: 20.sp,
             color: context.colors.onboardingTitleColor,
           ),
         ),
