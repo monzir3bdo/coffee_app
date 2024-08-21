@@ -20,7 +20,9 @@ class ProductPriceAndBuyNowWidget extends StatelessWidget {
             ProductPriceInDescriptionScreenWidget(
               coffee: coffee,
             ),
-            const BuyNowButtonWidget(),
+            BuyNowButtonWidget(
+              coffee: coffee,
+            ),
           ],
         ),
       ),

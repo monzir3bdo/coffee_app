@@ -6,13 +6,15 @@ part 'cart_model.g.dart';
 //todo: add part
 @HiveType(typeId: 2)
 class CartModel extends HiveObject {
-  final List<CoffeeOrderModel> coffees;
+  @HiveField(0)
+  List<CoffeeOrderModel> coffees;
+  @HiveField(1)
   final num totalPrice;
+  @HiveField(2)
   final num deliveryPrice;
 
-  CartModel({
-    required this.coffees,
-    required this.totalPrice,
-    required this.deliveryPrice,
-  });
+  CartModel(
+      {required this.coffees,
+      required this.totalPrice,
+      required this.deliveryPrice});
 }

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CartProductPriceWidget extends StatelessWidget {
-  const CartProductPriceWidget({super.key});
-
+  const CartProductPriceWidget({super.key, required this.coffeePrice});
+  final num coffeePrice;
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -17,7 +17,7 @@ class CartProductPriceWidget extends StatelessWidget {
         ),
         children: [
           TextSpan(
-            text: '20.00',
+            text: '$coffeePrice',
             style: medium14.copyWith(
               fontSize: 12.sp,
               color: context.colors.textColor,

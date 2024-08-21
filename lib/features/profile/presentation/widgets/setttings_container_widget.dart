@@ -12,6 +12,7 @@ class SettingsContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: GestureDetector(
+        onTap: onTap,
         child: Container(
           width: 325.w,
           height: 61.h,

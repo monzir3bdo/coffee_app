@@ -16,12 +16,23 @@ class CartModelAdapter extends TypeAdapter<CartModel> {
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return CartModel();
+    return CartModel(
+      coffees: (fields[0] as List).cast<CoffeeOrderModel>(),
+      totalPrice: fields[1] as num,
+      deliveryPrice: fields[2] as num,
+    );
   }
 
   @override
   void write(BinaryWriter writer, CartModel obj) {
-    writer.writeByte(0);
+    writer
+      ..writeByte(3)
+      ..writeByte(0)
+      ..write(obj.coffees)
+      ..writeByte(1)
+      ..write(obj.totalPrice)
+      ..writeByte(2)
+      ..write(obj.deliveryPrice);
   }
 
   @override

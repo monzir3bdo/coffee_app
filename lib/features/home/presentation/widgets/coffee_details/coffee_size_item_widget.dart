@@ -4,11 +4,19 @@ import 'package:coffee_app/features/home/presentation/widgets/coffee_details/cof
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:hive/hive.dart';
 
+part 'coffee_size_item_widget.g.dart';
+
+@HiveType(typeId: 3)
 enum CoffeeSize {
+  @HiveField(0)
   short,
+  @HiveField(1)
   tall,
+  @HiveField(2)
   grande,
+  @HiveField(3)
   venti,
 }
 

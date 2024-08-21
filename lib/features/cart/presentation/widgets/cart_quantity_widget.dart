@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class CartQuantityWidget extends StatelessWidget {
-  const CartQuantityWidget({super.key});
-
+  const CartQuantityWidget({super.key, required this.coffeeQuantity});
+  final int coffeeQuantity;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,7 +21,7 @@ class CartQuantityWidget extends StatelessWidget {
           iconColor: AppColors.black,
         ),
         Gap(15.w),
-        const Text('0'),
+        Text('$coffeeQuantity'),
         Gap(15.w),
         CoffeeQuantityButtonWidget(
           iconData: Icons.add,

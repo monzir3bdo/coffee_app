@@ -3,6 +3,8 @@ import 'package:coffee_app/core/screens/main/bloc/main_cubit.dart';
 import 'package:coffee_app/core/screens/main/screens/main_screen.dart';
 import 'package:coffee_app/features/auth/presentation/screens/onboarding_screen.dart';
 import 'package:coffee_app/features/auth/presentation/screens/spalsh_screen.dart';
+import 'package:coffee_app/features/cart/presentation/bloc/add_to_cart/add_to_cart_cubit.dart';
+import 'package:coffee_app/features/cart/presentation/bloc/get_cart/get_cart_bloc.dart';
 import 'package:coffee_app/features/cart/presentation/screens/cart_screen.dart';
 import 'package:coffee_app/features/cart/presentation/screens/checkout_screen.dart';
 import 'package:coffee_app/features/cart/presentation/screens/order_tracking_screen.dart';
@@ -83,7 +85,11 @@ final GoRouter router = GoRouter(
               transitionsBuilder: (context, animation1, animation2, child) {
                 return child;
               },
-              child: const CartScreen(),
+              child: BlocProvider(
+                create: (context) =>
+                    sl<GetCartBloc>()..add(const GetCartEvent.getCart()),
+                child: const CartScreen(),
+              ),
               fullscreenDialog: true,
             );
           },
@@ -129,7 +135,8 @@ final GoRouter router = GoRouter(
             BlocProvider.value(
               value: sl<GetFavouriteBloc>(),
             ),
-            BlocProvider(create: (context) => sl<CupCubit>())
+            BlocProvider(create: (context) => sl<CupCubit>()),
+            BlocProvider(create: (context) => sl<AddToCartCubit>()),
           ],
           child: CoffeeDetailsScreen(
             productId: int.parse(coffeeId),

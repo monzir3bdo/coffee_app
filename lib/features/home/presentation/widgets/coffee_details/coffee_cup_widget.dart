@@ -1,5 +1,6 @@
 import 'package:coffee_app/generated/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CoffeeCupWidget extends StatelessWidget {
@@ -15,13 +16,27 @@ class CoffeeCupWidget extends StatelessWidget {
   final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: SvgPicture.asset(
-        isSelected ? Assets.svgSelectedCup : Assets.svgCup,
-        width: width,
-        height: height,
-      ),
-    );
+    return isSelected
+        ? Animate(
+            effects: const [
+              ScaleEffect(),
+            ],
+            child: GestureDetector(
+              onTap: onTap,
+              child: SvgPicture.asset(
+                isSelected ? Assets.svgSelectedCup : Assets.svgCup,
+                width: width,
+                height: height,
+              ),
+            ),
+          )
+        : GestureDetector(
+            onTap: onTap,
+            child: SvgPicture.asset(
+              isSelected ? Assets.svgSelectedCup : Assets.svgCup,
+              width: width,
+              height: height,
+            ),
+          );
   }
 }

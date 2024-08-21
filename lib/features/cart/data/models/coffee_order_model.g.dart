@@ -17,22 +17,26 @@ class CoffeeOrderModelAdapter extends TypeAdapter<CoffeeOrderModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return CoffeeOrderModel(
-      coffeeModel: fields[0] as CoffeeModel,
-      totalPrice: fields[2] as int,
+      coffeeModel:
+          fields[0] == null ? [] : (fields[0] as List?)?.cast<CoffeeModel>(),
+      totalPrice: fields[2] as num,
       quantity: fields[1] as int,
+      coffeeSize: fields[3] as CoffeeSize?,
     );
   }
 
   @override
   void write(BinaryWriter writer, CoffeeOrderModel obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.coffeeModel)
       ..writeByte(1)
       ..write(obj.quantity)
       ..writeByte(2)
-      ..write(obj.totalPrice);
+      ..write(obj.totalPrice)
+      ..writeByte(3)
+      ..write(obj.coffeeSize);
   }
 
   @override
